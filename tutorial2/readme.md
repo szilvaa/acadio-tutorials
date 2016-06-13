@@ -1,4 +1,4 @@
-# Tutorial 2: Create a new drawing
+# Tutorial 2: Create a line
 
 ## Follow Step 1 through 3 in [Tutorial 1] (..\tutorial1\readme.md)
 ## Step 4: Create new activity
