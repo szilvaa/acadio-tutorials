@@ -2,8 +2,8 @@
 This tutorial how to use the `Status` output argument in your workitem to obtain the status of your workitem asynchronously.
 #Follow the steps in [Tutorial 1] (../tutroial1/readme.md)
 
-+Create 2 presigned urls in Step 4.
-+Use the following workitem.json in Step 5.1.
++ Create 2 presigned urls in Step 4.
++ Use the following workitem.json in Step 5.1.
 
 ```json
 {
