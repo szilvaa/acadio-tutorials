@@ -148,11 +148,43 @@ The response will be:
 ```
 You now have an AppPackage resource that you can reuse again and again in your Activities.
 ## Follow Step 4 in [Tutorial 2] (../tutorial2/readme.md)
-There are 2 things that you must change though when you create activity.json
-
-1. Set `"ActivityId": "ExtractLayers"`. 
-2. Set `"Script": "_.test\n"`
-
+Use the following when you create activity.json:
+```json
+{
+  "@odata.context": "https://developer.api.autodesk.com/autocad.io/us-east/v2/$metadata#Activities/$entity",
+  "AppPackages": [
+  ],
+  "HostApplication": "",
+  "RequiredEngineVersion": "20.1",
+  "Parameters": {
+    "InputParameters": [
+      {
+        "Name": "HostDwg",
+        "LocalFileName": "$(HostDwg)",
+        "Optional": null
+      }
+    ],
+    "OutputParameters": [
+      {
+        "Name": "Result",
+        "LocalFileName": "result.dwg",
+        "Optional": null
+      }
+    ]
+  },
+  "Instruction": {
+    "CommandLineParameters": null,
+    "Script": "_.line\n0,0\n10,10\n\n_.saveas\n\nresult.dwg\n"
+  },
+  "AllowedChildProcesses": [
+  ],
+  "IsPublic": false,
+  "Version": 1,
+  "Timestamp": "<your timestamp>",
+  "Description": "",
+  "Id": "CreateALine"
+}
+```
 **Note**: this works because the new activity `ExtractLayers` happens to have the exact same input and output parameters as the `CreateALine`.
 
 ## Follow Step 5 through 7 in [Tutorial 1] (../tutorial1/readme.md)
