@@ -124,7 +124,6 @@ Create text file `app.json` with the following content:
       "Resource": "<your upload url>",
       "RequiredEngineVersion": "21.0",
       "Id": "MyTestPackage",
-      "Version": 1
 }
 ```
 ```
@@ -148,12 +147,31 @@ The response will be:
 ```
 You now have an AppPackage resource that you can reuse again and again in your Activities.
 ## Follow Step 4 in [Tutorial 2] (../tutorial2/readme.md)
-There are 2 things that you must change though when you create activity.json
-
-1. Set `"ActivityId": "ExtractLayers"`. 
-2. Set `"Script": "_.test\n"`
-
-**Note**: this works because the new activity `ExtractLayers` happens to have the exact same input and output parameters as the `CreateALine`.
+Use the following as activity.json:
+```json
+{
+  "Id": "ExtractLayers",
+  "Instruction": {
+    "Script": "_.test\n"
+  },
+  "Parameters": {
+    "InputParameters": [
+      {
+        "LocalFileName": "$(HostDwg)",
+        "Name": "HostDwg"
+      }
+    ],
+    "OutputParameters": [
+      {
+        "LocalFileName": "layers.txt",
+        "Name": "Result"
+      }
+    ]
+  },
+  "AppPackages":[ 'MyTestPackage'],
+  "RequiredEngineVersion": "21.0"
+}
+```
 
 ## Follow Step 5 through 7 in [Tutorial 1] (../tutorial1/readme.md)
 The only difference is that when you post the workitem you should set `"ActivityId": "ExtractLayers"`. **Note**: this works because the built in activity `PlotToPDF` happens to have the exact same input and output arguments as the `CreateALine` custom activity that you created above.
