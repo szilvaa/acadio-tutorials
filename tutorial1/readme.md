@@ -39,7 +39,7 @@ Create a text file called `workitem.json` in the current folder for your termina
       {
         "Name": "Result",
         "HttpVerb": "PUT",
-        "Resource": "<your url from Step 4>"
+        "Resource": '<your_presigned_url>'
       }
     ]
   },
@@ -72,7 +72,7 @@ The above step results in the following response. Copy the Id field.
     ],
     "OutputArguments": [
       {
-        "Resource": "<your url from Step 4>",
+        "Resource": "<your_presigned_url>",
         "Name": "Result",
         "Headers": [
 
