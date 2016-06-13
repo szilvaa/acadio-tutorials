@@ -1,0 +1,24 @@
+{
+  "Arguments": {
+    "InputArguments": [
+      {
+        "Resource": "http://download.autodesk.com/us/samplefiles/acad/blocks_and_tables_-_imperial.dwg",
+        "Name": "HostDwg"
+      }
+    ],
+    "OutputArguments": [
+      {
+        "Name": "Result",
+        "HttpVerb": "PUT",
+        "Resource": "https://albert-sandbox.s3-us-west-2.amazonaws.com/test.pdf?AWSAccessKeyId=AKIAI3UI4DYS25TSCGCA&Expires=1466463120&Signature=%2BXQuz4ZU2abn%2FDmOXftlktEAtpE%3D"
+      },
+      {
+        "Name": "Status",
+        "HttpVerb": "PUT",
+        "Resource": "https://albert-sandbox.s3-us-west-2.amazonaws.com/status.json?AWSAccessKeyId=AKIAI3UI4DYS25TSCGCA&Expires=1466465040&Signature=6CdydYbicHIPRVFCeWSMdQwgrBs%3D"
+      }
+
+    ]
+  },
+  "ActivityId": "PlotToPDF"
+}
