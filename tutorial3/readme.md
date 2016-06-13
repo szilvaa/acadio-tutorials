@@ -22,7 +22,6 @@ namespace CrxApp
         [CommandMethod("MyTestCommands", "test", CommandFlags.Modal)]
         static public void Test()
         {
-            //prompt for input json and output folder
             var doc = Application.DocumentManager.MdiActiveDocument;
             var ed = doc.Editor;
             try
