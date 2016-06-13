@@ -46,8 +46,8 @@ Create a text file called `workitem.json` in the current folder for your termina
   "ActivityId": "PlotToPDF"
 }
 ```
-### Step 5.2 Issue the HTTP request 
-Execute the following command in your terminal window. 
+### Step 5.2 Post WorkItem resource
+Execute the following command in your terminal window. Please substitute the authorization token you obtained above at `<your token>`.
 ```
 curl https://developer.api.autodesk.com/autocad.io/us-east/v2/WorkItems -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your token>" -d @workitem.json
 ```
