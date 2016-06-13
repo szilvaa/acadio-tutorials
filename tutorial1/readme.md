@@ -170,4 +170,5 @@ curl <your report url>
 [06/12/2016 19:31:59] End upload phase.
 [06/12/2016 19:31:59] Job finished with result Succeeded
 ```
-This is the last step of this tutorial.
+End of tutorial
+---
