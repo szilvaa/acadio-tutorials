@@ -10,7 +10,7 @@
       {
         "Name": "Result",
         "HttpVerb": "PUT",
-        "Resource": "https://albert-sandbox.s3-us-west-2.amazonaws.com/test?AWSAccessKeyId=AKIAIKV6JNTMZRDRQO2A&Expires=1465770540&Signature=3TbnDDRZ4UhRQakIQgNVnwnulPw%3D"
+        "Resource": "<your s3 presigned url>"
       }
     ]
   },
