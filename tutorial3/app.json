@@ -1,0 +1,6 @@
+{
+      "Resource": "https://acadio.s3.amazonaws.com/aces-apppackages/6e37dc95-02c4-43d4-8a13-cf01ebe1b3af/37296bb9-32d3-49d3-8546-86184b5985a9?AWSAccessKeyId=ASIAJZI7JCUFFBCGJLZQ&Expires=1465846042&x-amz-security-token=FQoDYXdzEGMaDL%2FNEmcNr%2Bm9g0r3FCKZAznvF%2Fsj%2FnGuBQ1FyDeFgBAlRyZbr0vBNtqHfVJEbU3jEH4fTIQG33pgHIsS%2BSBeGDDc7%2FbtZE8HudHDVtI82gxZHCGyj7dD%2BDFu%2BMKa5EEHYoManujRgRArK%2F6cdx8UTWb48G81y%2B3boWY56VCPV08HPePyA3wqfSylzmL0Dsx3%2Bs1TxloGmrVlTPw20R7rBMD9hJQjBJG%2BMqHACF31UbRSq9SakRYYx8JwbUO2SQ8s1Udm5GDlwECjgnMAvyDvj0bSOF%2FK8s9r9d%2FuH2PpXrfL0c7ycIJdISvuaIXkEMi2Nm5CAtsOyl3dYX%2FXG2RuIrsn8b3sRqZbjuuOuWO%2BWnTFXS9%2FnYLlTKwP9Jp5zuxl%2Bws9dNrSJcpMGSurQbXslo%2FE%2FsJCZVqGi%2FoeH1Y%2B%2F1grMbwLAi1BvlMvTgKOT8HLfag3SuCc2X75LCYzrYfkyn9HtHjPPT30kEGKJBrpWkUUifqiga4byOlNn2KhUyFwM6%2B%2BN6M8K03%2B98T%2Bff34IDOLmajVF9BgRxAtP4h9iRvJ%2BunGUNUreAcou%2Bf7ugU%3D&Signature=U4htk3ZYYYnkldm%2Bp4qXpD%2F%2BV6E%3D",
+      "RequiredEngineVersion": "21.0",
+      "Id": "MyTestPackage",
+      "Version": 1
+}
