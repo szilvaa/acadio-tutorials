@@ -48,7 +48,7 @@ Nuget is a package manager for .net. We need it to download dependencies that ou
 ```
 curl https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 ```
-### Step 4.3. Download dependencies
+### Step 4.3: Download dependencies
 Our C# code relies on the AutoCAD .NET API. You need to obtain these assemblies from https://nuget.org. Execute the following command to download them:
 ```
 nuget install AutoCAD.NET.Core -Version 21.0.0 -ExcludeVersion
@@ -58,7 +58,29 @@ Run the following command. It will generate command.dll.
 ```
 csc command.cs /r:AutoCAD.NET.Model\lib\45\acdbmgd.dll /r:AutoCAD.NET.Core\lib\45\accoremgd.dll /t:library
 ```
-## Step 5. Package the C# dll into an Autoloader zip
+## Step 5: Package the C# dll into an Autoloader zip
 When uploading code to the service you must package it into a zip file with manifest. This zip file is called an autoloader package and it is the same format used by [Autodesk Exchange Apps] (https://apps.autodesk.com).
-### Create autoloader manifest
-
+### Step 5.1: Create autoloader manifest
+Create a text file named `PackageContents.xml` with the following content:
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<ApplicationPackage
+    SchemaVersion="1.0"
+    Version="1.0">
+    <Components>
+        <RuntimeRequirements 
+            OS="Win64" 
+            Platform="AutoCAD" />
+        <ComponentEntry
+            AppName="MyTestPackage"
+            ModuleName="./Contents/Command.dll"
+            AppDescription="AutoCAD.IO .net test app"
+            LoadOnCommandInvocation="True"
+            LoadOnAutoCADStartup="False">
+            <Commands GroupName="MyTestCommands">
+                <Command Global="TEST" Local="TEST" />
+            </Commands>
+        </ComponentEntry>
+    </Components>
+</ApplicationPackage>
+```
