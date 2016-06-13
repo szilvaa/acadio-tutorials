@@ -1,7 +1,7 @@
 #Tutorial 4: Using Status callback instead of polling
 This tutorial how to use the `Status` output argument in your workitem to obtain the status of your workitem asynchronously.
 #Follow the steps in [Tutorial 1] (../tutroial1/readme.md)
-
+The following where you have diverge from the original steps:
 + Create 2 presigned urls in Step 4.
 + Use the following workitem.json in Step 5.1.
 
