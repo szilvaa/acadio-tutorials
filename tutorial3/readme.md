@@ -27,8 +27,7 @@ namespace CrxApp
             var ed = doc.Editor;
             try
             {
-                //extract layer names and block names from drawing as requested and place the results in the
-                //output folder 
+                //extract layer names and save them to layers.txt
                 var db = doc.Database;
                 using (var writer = File.CreateText("layers.txt"))
                 {
