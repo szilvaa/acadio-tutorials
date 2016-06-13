@@ -2,6 +2,7 @@
 ## Follow Step 1 through 3 in [Tutorial 1] (..\tutorial1\readme.md)
 ## Step 4: Create new activity
 Creating a new activity is like defining a function in most progrramming languages: you must specify input and output parameters and the instructions that the function carries out. We will do something extremely simple: draw a line from 0,0, to 10,10 and save the drawing.
+**Note:** Once you have created the activity the service stores it for you and you can submit any number of workitems that use this activity.
 
 ### Step 4.1 Create request body
 Create a text file called `activity.json` in the current folder for your terminal window with the following content:
