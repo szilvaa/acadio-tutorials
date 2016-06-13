@@ -113,11 +113,11 @@ The _response_ will be:
 }
 ```
 
-### Step 6.2: Upload autoloader package
+### Step 6.2: Upload you autoloader package
 ```
 curl <upload url> -X PUT -T package.zip
 ```
-### Step 6.3: Post AppPackage
+### Step 6.3: Post your AppPackage resource
 Create text file `app.json` with the following content:
 ```json
 {
