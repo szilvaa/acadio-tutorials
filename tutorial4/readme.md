@@ -3,6 +3,7 @@ This tutorial how to use the `Status` output argument in your workitem to obtain
 #Follow the steps in [Tutorial 1] (../tutroial1/readme.md)
 The following where you have diverge from the original steps:
 + Create 2 presigned urls in Step 4. IMPORTANT: Make sure that your 2nd presigned URL is generated with Content-Type: application/json; charset=utf-8 as pictured below.
++ 
 ![Presigned URL] (dialog.png)
 + Use the following workitem.json in Step 5.1.
 
