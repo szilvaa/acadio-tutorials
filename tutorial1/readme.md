@@ -49,7 +49,7 @@ Create a text file called `workitem.json` in the current folder for your termina
 ### Step 5.2 Issue the HTTP request 
 Execute the following command in your terminal window. 
 ```
-curl https://developer.api.autodesk.com/autocad.io/us-east/v2/WorkItems -X POST -H "Content-Type: application/json" -H "Authorization: Bearer lY7xiNQfkuFs4t639HOf4bZRcOua" -d @workitem.json
+curl https://developer.api.autodesk.com/autocad.io/us-east/v2/WorkItems -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your token>" -d @workitem.json
 ```
 ### Step 5.3. Retrieve the workitem id
 The above step results in the following response. Copy the Id field.
