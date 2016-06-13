@@ -35,7 +35,7 @@ Create a text file called `activity.json` in the current folder for your termina
 ### Step 4.2: Post Activity resource
 Execute the following command in your terminal window. 
 ```
-curl https://developer.api.autodesk.com/autocad.io/us-east/v2/Activities -X POST -H "Content-Type: application/json" -H "Authorization: Bearer lY7xiNQfkuFs4t639HOf4bZRcOua" -d @activity.json
+curl https://developer.api.autodesk.com/autocad.io/us-east/v2/Activities -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your token>" -d @activity.json
 ```
 The _response_ body will be this:
 
