@@ -31,4 +31,4 @@ This tutorial how to use the `Status` output argument in your workitem to obtain
   "ActivityId": "PlotToPDF"
 }
 ```
-Note the `Status` output argument. The service will execute an HTTP PUT operation with a json that contains the status of the workitem. Note that you can also use POST if desired.
+Note the `Status` output argument. The service will execute an HTTP PUT operation with a json request body that contains the status of the workitem. Note that you can also use POST if desired.
