@@ -174,7 +174,7 @@ Use the following as activity.json:
 ```
 
 ## Follow Step 5 through 7 in [Tutorial 1] (../tutorial1/readme.md)
-The only difference is that when you post the workitem you should set `"ActivityId": "ExtractLayers"`. **Note**: this works because the built in activity `PlotToPDF` happens to have the exact same input and output arguments as the `CreateALine` custom activity that you created above.
+The only difference is that when you post the workitem you should set `"ActivityId": "ExtractLayers"`. **Note**: this works because the built in activity `PlotToPDF` happens to have the exact same input and output arguments as the `ExtractLayers` custom activity that you created above.
 
 End of Tutorial
 ---
