@@ -48,7 +48,7 @@ namespace CrxApp
 ### Step 4.2: Download nuget.exe
 Nuget is a package manager for .net. We need it to download dependencies that our C# code requires. Download it with the following command:
 ```
-curl https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+curl https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -o nuget.exe
 ```
 ### Step 4.3: Download dependencies
 Our C# code relies on the AutoCAD .NET API. You need to obtain these assemblies from https://nuget.org. Execute the following command to download them:
