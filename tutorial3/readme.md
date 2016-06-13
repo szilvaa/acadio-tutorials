@@ -150,28 +150,26 @@ You now have an AppPackage resource that you can reuse again and again in your A
 Use the following as activity.json:
 ```json
 {
-  "AppPackages": [
-    'MyTestPackage'
-  ],
-  "RequiredEngineVersion": "21.0",
+  "Id": "ExtractLayers",
+  "Instruction": {
+    "Script": "_.test\n"
+  },
   "Parameters": {
     "InputParameters": [
       {
-        "Name": "HostDwg",
         "LocalFileName": "$(HostDwg)",
+        "Name": "HostDwg"
       }
     ],
     "OutputParameters": [
       {
-        "Name": "Result",
         "LocalFileName": "layers.txt",
+        "Name": "Result"
       }
     ]
   },
-  "Instruction": {
-    "Script": "_.test\n"
-  },
-  "Id": "ExtractLayers"
+  "AppPackages":[ 'MyTestPackage'],
+  "RequiredEngineVersion": "21.0"
 }
 ```
 
