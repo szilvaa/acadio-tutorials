@@ -1,5 +1,5 @@
 # Tutorial 1: Convert DWG to PDF
-In this tutorial you will convert a public sample dwg file to a pdf file to AWS S3. The steps were tested on Windows 10 and Ubuntu Linux but they should work on your operating system of choice (they only require a web browser and curl utility).
+In this tutorial you will convert a public sample dwg file to a pdf file on AWS S3. The conversion is a predefined [activity] (https://developer.autodesk.com/en/docs/design-automation/v2/overview/field-guide/) of the service so we simply submit a workitem. The steps were tested on Windows 10 and Ubuntu Linux but they should work on your operating system of choice (they only require a web browser and curl utility).
 ## Step 1: Create a Forge app
 This step is common for any Forge workflows. Follow the steps [here] (https://developer.autodesk.com/en/docs/oauth/v2/tutorials/create-app/).
 ## Step 2: Make sure you have Curl
