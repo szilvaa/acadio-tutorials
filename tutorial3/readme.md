@@ -121,7 +121,7 @@ curl <upload url> -X PUT -T package.zip
 Create text file `app.json` with the following content:
 ```json
 {
-      "Resource": "<your upload url>",
+      "Resource": '<your_upload_url>',
       "RequiredEngineVersion": "21.0",
       "Id": "MyTestPackage",
 }
@@ -135,7 +135,7 @@ The response will be:
   "@odata.context": "https://developer.api.autodesk.com/autocad.io/us-east/v2/$metadata#AppPackages/$entity",
   "References": [
   ],
-  "Resource": "<your upload url>",
+  "Resource": "<your_upload_url>",
   "RequiredEngineVersion": "21.0",
   "IsPublic": false,
   "IsObjectEnabler": false,
