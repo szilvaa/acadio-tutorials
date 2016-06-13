@@ -151,7 +151,7 @@ You now have an AppPackage resource that you can reuse again and again in your A
 There are 2 things that you must change though when you create activity.json
 
 1. Set `"ActivityId": "ExtractLayers"`. 
-2. Set `"Instruction": "_.test\n"`
+2. Set `"Script": "_.test\n"`
 
 **Note**: this works because the new activity `ExtractLayers` happens to have the exact same input and output parameters as the `CreateALine`.
 
