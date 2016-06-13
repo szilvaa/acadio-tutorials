@@ -93,5 +93,57 @@ xcopy PackageContents.xml MyTestPackage.bundle\
 xcopy command.dll MyTestPackage.bundle\Contents\
 zip -r package.zip MyTestPackage.bundle
 ```
-You now have an autoloader package that you can upload to the service.
-### Step 6. Create AppPackage resource
+You now have an autoloader package `package.zip` that you can upload to the service.
+## Step 6: Create AppPackage resource
+Creating the AppPackage resource is a 3 steps process. 
+
+1. Get upload url
+2. Upload autoloader package
+3. Post AppPackage with upload url
+
+### Step 6.1: Get upload url
+```
+curl https://developer.api.autodesk.com/autocad.io/us-east/v2/AppPackages/Operations.GetUploadUrl -H "Authorization: Bearer <your token>"
+```
+The _response_ will be:
+```json
+{
+  "@odata.context":"https://developer.api.autodesk.com/autocad.io/us-east/v2/$metadata#Edm.String",
+  "value":"<your upload url"
+}
+```
+
+### Step 6.2: Upload autoloader package
+```
+curl <upload url> -X PUT -T package.zip
+```
+### Step 6.3: Post AppPackage
+Create text file `app.json` with the following content:
+```json
+{
+      "Resource": "<your upload url>",
+      "RequiredEngineVersion": "21.0",
+      "Id": "MyTestPackage",
+      "Version": 1
+}
+```
+```
+curl https://developer.api.autodesk.com/autocad.io/us-east/v2/AppPackages -X POST -H "Content-Type: application/json" -H "Authorization: Bearer <your token>" -d @app.json
+```
+The response will be:
+```json
+{
+  "@odata.context": "https://developer.api.autodesk.com/autocad.io/us-east/v2/$metadata#AppPackages/$entity",
+  "References": [
+  ],
+  "Resource": "<your upload url>",
+  "RequiredEngineVersion": "21.0",
+  "IsPublic": false,
+  "IsObjectEnabler": false,
+  "Version": 1,
+  "Timestamp": "<your time stamp>",
+  "Description": "",
+  "Id": "MyTestPackage"
+}
+```
+You now have an AppPackage resource that you can reuse again and again in your Activities.
