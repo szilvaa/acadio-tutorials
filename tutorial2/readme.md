@@ -1,5 +1,5 @@
 # Tutorial 2: Create a line
-In this tutorial you will create a custom activity that adds a line the input drawing.
+In this tutorial you will create a custom activity that adds a line to the input drawing.
 ## Follow Step 1 through 3 in [Tutorial 1] (..\tutorial1\readme.md)
 ## Step 4: Create new activity
 Creating a new activity is like defining a function in most progrramming languages: you must specify input and output parameters and the instructions that the function carries out. We will do something extremely simple: draw a line from 0,0, to 10,10 and save the drawing.
