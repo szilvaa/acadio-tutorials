@@ -124,7 +124,6 @@ Create text file `app.json` with the following content:
       "Resource": "<your upload url>",
       "RequiredEngineVersion": "21.0",
       "Id": "MyTestPackage",
-      "Version": 1
 }
 ```
 ```
@@ -148,44 +147,33 @@ The response will be:
 ```
 You now have an AppPackage resource that you can reuse again and again in your Activities.
 ## Follow Step 4 in [Tutorial 2] (../tutorial2/readme.md)
-Use the following when you create activity.json:
+Use the following as activity.json:
 ```json
 {
-  "@odata.context": "https://developer.api.autodesk.com/autocad.io/us-east/v2/$metadata#Activities/$entity",
   "AppPackages": [
+    'MyTestPackage'
   ],
-  "HostApplication": "",
-  "RequiredEngineVersion": "20.1",
+  "RequiredEngineVersion": "21.0",
   "Parameters": {
     "InputParameters": [
       {
         "Name": "HostDwg",
         "LocalFileName": "$(HostDwg)",
-        "Optional": null
       }
     ],
     "OutputParameters": [
       {
         "Name": "Result",
-        "LocalFileName": "result.dwg",
-        "Optional": null
+        "LocalFileName": "layers.txt",
       }
     ]
   },
   "Instruction": {
-    "CommandLineParameters": null,
-    "Script": "_.line\n0,0\n10,10\n\n_.saveas\n\nresult.dwg\n"
+    "Script": "_.test\n"
   },
-  "AllowedChildProcesses": [
-  ],
-  "IsPublic": false,
-  "Version": 1,
-  "Timestamp": "<your timestamp>",
-  "Description": "",
-  "Id": "CreateALine"
+  "Id": "ExtractLayers"
 }
 ```
-**Note**: this works because the new activity `ExtractLayers` happens to have the exact same input and output parameters as the `CreateALine`.
 
 ## Follow Step 5 through 7 in [Tutorial 1] (../tutorial1/readme.md)
 The only difference is that when you post the workitem you should set `"ActivityId": "ExtractLayers"`. **Note**: this works because the built in activity `PlotToPDF` happens to have the exact same input and output arguments as the `CreateALine` custom activity that you created above.
