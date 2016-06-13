@@ -31,7 +31,7 @@ Create a text file called `workitem.json` in the current folder for your termina
   "Arguments": {
     "InputArguments": [
       {
-        "Resource": "http://download.autodesk.com/us/samplefiles/acad/visualization_-_aerial.dwg",
+        "Resource": "http://download.autodesk.com/us/samplefiles/acad/blocks_and_tables_-_imperial.dwg",
         "Name": "HostDwg"
       }
     ],
