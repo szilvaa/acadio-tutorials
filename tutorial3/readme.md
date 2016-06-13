@@ -1,8 +1,8 @@
 # Tutorial 3: Creating your own AppPackage
 In this tutorial you will create an AppPackage (a C# dll) that implements an AutoCAD command which extracts layer names from the input drawing and saves them as a text file. You will also create an a custom Activity that uses this command.
 ## Prerequisites
-+ Working C# 6.0 compiler (this is part of Visual Studio 2015 or you can download it from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=49982)
-+ Zip utility
++ Working C# 6.0 compiler. (This is part of Visual Studio 2015 or you can download it from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=49982)). Mono C# compiler has _not_ been tested at this time.
++ Working Zip utility. (Download one from http://www.7-zip.org/download.html)
 
 ## Follow Step 1 through 3 in [Tutorial 1] (..\tutorial1\readme.md)
 ## Step 4: Create the C# dll
@@ -86,3 +86,12 @@ Create a text file named `PackageContents.xml` with the following content:
     </Components>
 </ApplicationPackage>
 ```
+### Step 5.2: Zip files
+First lay out the files such that we can easily zip them and then zip the top level folder. Run the following commands:
+```
+xcopy PackageContents.xml MyTestPackage.bundle\
+xcopy command.dll MyTestPackage.bundle\Contents\
+zip -r package.zip MyTestPackage.bundle
+```
+You now have an autoloader package that you can upload to the service.
+### Step 6. Create AppPackage resource
