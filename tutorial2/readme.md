@@ -32,10 +32,48 @@ Create a text file called `activity.json` in the current folder for your termina
   "RequiredEngineVersion": "20.1"
 }
 ```
-### Step 4.2 Issue the HTTP request 
+### Step 4.2: Post Activity resource
 Execute the following command in your terminal window. 
 ```
 curl https://developer.api.autodesk.com/autocad.io/us-east/v2/Activities -X POST -H "Content-Type: application/json" -H "Authorization: Bearer lY7xiNQfkuFs4t639HOf4bZRcOua" -d @activity.json
+```
+The _response_ body will be this:
+
+```json
+{
+  "@odata.context": "https://developer.api.autodesk.com/autocad.io/us-east/v2/$metadata#Activities/$entity",
+  "AppPackages": [
+  ],
+  "HostApplication": "",
+  "RequiredEngineVersion": "20.1",
+  "Parameters": {
+    "InputParameters": [
+      {
+        "Name": "HostDwg",
+        "LocalFileName": "$(HostDwg)",
+        "Optional": null
+      }
+    ],
+    "OutputParameters": [
+      {
+        "Name": "Result",
+        "LocalFileName": "result.dwg",
+        "Optional": null
+      }
+    ]
+  },
+  "Instruction": {
+    "CommandLineParameters": null,
+    "Script": "_.line\n0,0\n10,10\n\n_.saveas\n\nresult.dwg\n"
+  },
+  "AllowedChildProcesses": [
+  ],
+  "IsPublic": false,
+  "Version": 2,
+  "Timestamp": "<your time stamp>",
+  "Description": "",
+  "Id": "CreateALine"
+}
 ```
 ## Follow Step 5 through 7 in [Tutorial 1] (../tutorial1/readme.md)
 The only difference is that when you post the workitem you should set `"ActivityId": "CreateALine"`. **Note**: this works because the built in activity `PlotToPDF` happens to have the exact same input and output arguments as the `CreateALine` custom activity that you created above.
