@@ -123,7 +123,7 @@ Create text file `app.json` with the following content:
 {
       "Resource": '<your_upload_url>',
       "RequiredEngineVersion": "21.0",
-      "Id": "MyTestPackage",
+      "Id": "MyTestPackage"
 }
 ```
 ```
