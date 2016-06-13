@@ -4,7 +4,7 @@ In this tutorial you will create an AppPackage (a C# dll) that implements an Aut
 + Working C# 6.0 compiler. (This is part of Visual Studio 2015 or you can download it from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=49982)). Mono C# compiler has _not_ been tested at this time.
 + Working Zip utility. (Download one from http://www.7-zip.org/download.html)
 
-## Follow Step 1 through 3 in [Tutorial 1] (..\tutorial1\readme.md)
+## Follow Step 1 through 3 in [Tutorial 1] (../tutorial1/readme.md)
 ## Step 4: Create the C# dll
 An AppPackage is an AutoCAD plugin written in any .net language (AutoLisp and C++ are also supported). The plugin interacts with the AutoCAD API to implement a custom command that your activity may call.
 ### Step 4.1: Write the C# code
