@@ -20,12 +20,12 @@ The following where you have diverge from the original steps:
       {
         "Name": "Result",
         "HttpVerb": "PUT",
-        "Resource": "<your #1 s3 presigned url for upload>"
+        "Resource": '<your #1 s3 presigned url for upload>'
       },
       {
         "Name": "Status",
         "HttpVerb": "PUT",
-        "Resource": "<your #2 s3 presigned url for upload>"
+        "Resource": '<your #2 s3 presigned url for upload>'
       }
 
     ]
