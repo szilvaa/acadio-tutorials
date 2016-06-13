@@ -1,0 +1,21 @@
+{
+  "Id": "CreateALine",
+  "Instruction": {
+    "Script": "_.line\n0,0\n10,10\n\n_.saveas\n\nresult.dwg\n"
+  },
+  "Parameters": {
+    "InputParameters": [
+      {
+        "LocalFileName": "$(HostDwg)",
+        "Name": "HostDwg"
+      }
+    ],
+    "OutputParameters": [
+      {
+        "LocalFileName": "result.dwg",
+        "Name": "Result"
+      }
+    ]
+  },
+  "RequiredEngineVersion": "20.1"
+}
