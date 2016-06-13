@@ -2,6 +2,8 @@
 In this tutorial you will create an AppPackage (a C# dll) that implements an AutoCAD command which extracts layer names from the input drawing and saves them as a text file. You will also create an a custom Activity that uses this command.
 ## Prerequisites
 + Working C# 6.0 compiler (this is part of Visual Studio 2015 or you can download it from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=49982)
++ Zip utility
+
 ## Follow Step 1 through 3 in [Tutorial 1] (..\tutorial1\readme.md)
 ## Step 4: Create the C# dll
 An AppPackage is an AutoCAD plugin written in any .net language (AutoLisp and C++ are also supported). The plugin interacts with the AutoCAD API to implement a custom command that your activity may call.
