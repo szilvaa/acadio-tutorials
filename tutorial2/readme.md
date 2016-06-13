@@ -35,7 +35,7 @@ Execute the following command in your terminal window.
 curl https://developer.api.autodesk.com/autocad.io/us-east/v2/Activities -X POST -H "Content-Type: application/json" -H "Authorization: Bearer lY7xiNQfkuFs4t639HOf4bZRcOua" -d @activity.json
 ```
 ## Follow Step 5 through 7 in [Tutorial 1] (../tutorial1/readme.md)
-The only difference is that when you post the workitem you should set `"ActivityId": "CreateALine"`
+The only difference is that when you post the workitem you should set `"ActivityId": "CreateALine"`. **Note**: this works because the built in activity `PlotToPDF` happens to have the exact same input and output arguments as the `CreateALine` custom activity that you created above.
 
 End of Tutorial
 ---
