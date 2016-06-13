@@ -1,0 +1,18 @@
+{
+  "Arguments": {
+    "InputArguments": [
+      {
+        "Resource": "http://download.autodesk.com/us/samplefiles/acad/blocks_and_tables_-_imperial.dwg",
+        "Name": "HostDwg"
+      }
+    ],
+    "OutputArguments": [
+      {
+        "Name": "Result",
+        "HttpVerb": "PUT",
+        "Resource": "<your s3 presigned url>"
+      }
+    ]
+  },
+  "ActivityId": "CreateALine"
+}

@@ -1,0 +1,22 @@
+{
+  "Id": "ExtractLayers",
+  "Instruction": {
+    "Script": "_.test\n"
+  },
+  "Parameters": {
+    "InputParameters": [
+      {
+        "LocalFileName": "$(HostDwg)",
+        "Name": "HostDwg"
+      }
+    ],
+    "OutputParameters": [
+      {
+        "LocalFileName": "layers.txt",
+        "Name": "Result"
+      }
+    ]
+  },
+  "AppPackages":[ 'MyTestPackage'],
+  "RequiredEngineVersion": "21.0"
+}
