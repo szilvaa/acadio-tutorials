@@ -15,11 +15,11 @@ Follow the [steps](http://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUp
 
 1. Right click on the bucket where you want the object to be stored.
 
-![right click image] (right_click.png)
+![right click image](right_click.png)
 
 2. Fill out the dialog fields, generate and copy the URL.
 
-![dialog image] (dialog.png)
+![dialog image](dialog.png)
 
 ## Step 5: Create a workitem
 The WorkItem is where the source and destination are specified for the input and output files, respectively, and it references the desired Activity to be executed.
