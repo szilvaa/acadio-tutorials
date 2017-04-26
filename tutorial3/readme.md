@@ -1,10 +1,10 @@
 # Tutorial 3: Creating your own AppPackage
 In this tutorial you will create an AppPackage (a C# dll) that implements an AutoCAD command which extracts layer names from the input drawing and saves them as a text file. You will also create an a custom Activity that uses this command.
 ## Prerequisites
-+ Working C# 6.0 compiler. (This is part of Visual Studio 2015 or you can download it from [here] (https://www.microsoft.com/en-us/download/details.aspx?id=49982)). Mono C# compiler has _not_ been tested at this time.
++ Working C# 6.0 compiler. (This is part of Visual Studio 2015 or you can download it from [here](https://www.microsoft.com/en-us/download/details.aspx?id=49982)). Mono C# compiler has _not_ been tested at this time.
 + Working Zip utility. (Download one from http://www.7-zip.org/download.html)
 
-## Follow Step 1 through 3 in [Tutorial 1] (../tutorial1/readme.md)
+## Follow Step 1 through 3 in [Tutorial 1](../tutorial1/readme.md)
 ## Step 4: Create the C# dll
 An AppPackage is an AutoCAD plugin written in any .net language (AutoLisp and C++ are also supported). The plugin interacts with the AutoCAD API to implement a custom command that your activity may call.
 ### Step 4.1: Write the C# code
@@ -61,7 +61,7 @@ Run the following command. It will generate command.dll.
 csc command.cs /r:AutoCAD.NET.Model\lib\45\acdbmgd.dll /r:AutoCAD.NET.Core\lib\45\accoremgd.dll /t:library
 ```
 ## Step 5: Package the C# dll into an Autoloader zip
-When uploading code to the service you must package it into a zip file with manifest. This zip file is called an autoloader package and it is the same format used by [Autodesk Exchange Apps] (https://apps.autodesk.com).
+When uploading code to the service you must package it into a zip file with manifest. This zip file is called an autoloader package and it is the same format used by [Autodesk Exchange Apps](https://apps.autodesk.com).
 ### Step 5.1: Create autoloader manifest
 Create a text file named `PackageContents.xml` with the following content:
 ```xml
@@ -146,7 +146,7 @@ The response will be:
 }
 ```
 You now have an AppPackage resource that you can reuse again and again in your Activities.
-## Follow Step 4 in [Tutorial 2] (../tutorial2/readme.md)
+## Follow Step 4 in [Tutorial 2](../tutorial2/readme.md)
 Use the following as activity.json:
 ```json
 {
@@ -173,7 +173,7 @@ Use the following as activity.json:
 }
 ```
 
-## Follow Step 5 through 7 in [Tutorial 1] (../tutorial1/readme.md)
+## Follow Step 5 through 7 in [Tutorial 1](../tutorial1/readme.md)
 The only difference is that when you post the workitem you should set `"ActivityId": "ExtractLayers"`. **Note**: this works because the built in activity `PlotToPDF` happens to have the exact same input and output arguments as the `ExtractLayers` custom activity that you created above.
 
 End of Tutorial
