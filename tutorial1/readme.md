@@ -1,7 +1,7 @@
 # Tutorial 1: Convert DWG to PDF
-In this tutorial you will convert a public sample dwg file to a pdf file on AWS S3. The conversion is a predefined [activity] (https://developer.autodesk.com/en/docs/design-automation/v2/overview/field-guide/) of the service so we simply submit a workitem. The steps were tested on Windows 10 and Ubuntu Linux but they should work on your operating system of choice (they only require a web browser and curl utility).
+In this tutorial you will convert a public sample dwg file to a pdf file on AWS S3. The conversion is a predefined [activity](https://developer.autodesk.com/en/docs/design-automation/v2/overview/field-guide/) of the service so we simply submit a workitem. The steps were tested on Windows 10 and Ubuntu Linux but they should work on your operating system of choice (they only require a web browser and curl utility).
 ## Step 1: Create a Forge app
-This step is common for any Forge workflows. Follow the steps [here] (https://developer.autodesk.com/en/docs/oauth/v2/tutorials/create-app/).
+This step is common for any Forge workflows. Follow the steps [here](https://developer.autodesk.com/en/docs/oauth/v2/tutorials/create-app/).
 ## Step 2: Make sure you have Curl
 Open a terminal window and type
 ```
@@ -9,9 +9,9 @@ curl
 ```
 If the command is recognized, then you are good to go. Otherwise, you must obtain curl. Visit https://curl.haxx.se/ to download.
 ## Step 3: Get a 2-legged Oauth token
-This step is common for most Forge workflows. Follow the steps [here] (https://developer.autodesk.com/en/docs/oauth/v2/tutorials/get-2-legged-token/). **IMPORTANT**: you must specify `scope=code:all` instead of `scope=data:read`.
+This step is common for most Forge workflows. Follow the steps [here](https://developer.autodesk.com/en/docs/oauth/v2/tutorials/get-2-legged-token/). **IMPORTANT**: you must specify `scope=code:all` instead of `scope=data:read`.
 ## Step 4: Prepare output URL on AWS S3
-Follow the [steps] (http://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the AWS documentation to create presigned url in your AWS account. The following screenshots show how to do this if you have [AWS Toolkit for Visual Studio 2015 installed] (https://aws.amazon.com/visualstudio/).
+Follow the [steps](http://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the AWS documentation to create presigned url in your AWS account. The following screenshots show how to do this if you have [AWS Toolkit for Visual Studio 2015 installed](https://aws.amazon.com/visualstudio/).
 
 1. Right click on the bucket where you want the object to be stored.
 
@@ -23,7 +23,7 @@ Follow the [steps] (http://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlU
 
 ## Step 5: Create a workitem
 The WorkItem is where the source and destination are specified for the input and output files, respectively, and it references the desired Activity to be executed.
-We will use the [POST WorkItems] (https://developer.autodesk.com/en/docs/design-automation/v2/reference/http/WorkItems-POST) endpoint to create the WorkItem. 
+We will use the [POST WorkItems](https://developer.autodesk.com/en/docs/design-automation/v2/reference/http/WorkItems-POST) endpoint to create the WorkItem. 
 ### Step 5.1 Create request body
 Create a text file called `workitem.json` in the current folder for your terminal window with the following content:
 ```json
