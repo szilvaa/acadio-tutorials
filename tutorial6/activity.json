@@ -1,0 +1,25 @@
+{
+  "Id": "ExecuteAScript",
+  "Instruction": {
+    "Script": "_.SCRIPTCALL my.scr\n_layoutcreateviewport 1\n_tilemode 0\n-export _pdf _all result.pdf\n"
+  },
+  "Parameters": {
+    "InputParameters": [
+      {
+        "LocalFileName": "$(HostDwg)",
+        "Name": "HostDwg"
+      },
+      {
+        "LocalFileName": "my.scr",
+        "Name": "MyScript"
+      }
+    ],
+    "OutputParameters": [
+      {
+        "LocalFileName": "result.pdf",
+        "Name": "MyResult"
+      }
+    ]
+  },
+  "RequiredEngineVersion": "23.0"
+}

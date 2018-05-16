@@ -5,3 +5,4 @@
 + [Turorial 3](tutorial3/readme.md): Extract layers from a drawing using custom C# code (creating a custom apppackage)
 + [Turorial 4](tutorial4/readme.md): Same as Tutorial 1 but this time with asynchronous status notification.
 + [Turorial 5](tutorial5/readme.md): Same as Tutorial 1 but sends output to OSS (part of Forge Data Management API)
++ [Tutorial 6](tutorial6/readme.md): Similar to Tutorial 2 but the custom activity uses an input script.
